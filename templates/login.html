@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><head>
+<title>rogue login</title>
+</head><body>
+<form action="{{url_for('endpoint',path=path)}}" method="POST">
+<input type="hidden" name="state" value="{{get.state}}">
+<input type="hidden" name="redirect_uri" value="{{get.redirect_uri}}">
+
+<p>Who do you want to be today? <input type="text" name="me" value="{{get.me}}"></p>
+
+<p>What scopes do you want to do it with? <input type="text" name="scope" value="{{get.scope}}"></p>
+
+<input type="submit" value="Go">
+</form></body>
+</html>
