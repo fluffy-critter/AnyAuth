@@ -17,8 +17,6 @@ Then when you are prompted for login confirmation, provide whatever "canonical" 
 
 ## Test cases
 
-Per the spec as of March 2019, the following cases should succeed:
+The only logins which succeed should be where the initial profile URL matches the returned `me` URL; for example, `https://anyauth.example.com/foo` should not be able to validate as `https://anyauth.example.com/bar`.
 
-* any case where the domain matches exactly (e.g. `https://anyauth.example.com/foo` &rarr; `http://anyauth.example.com/bar` should succeed)
-
-And anything else should fail.
+Older versions of the IndieAuth spec allowed any logins with a matching domain succeed (e.g. `https://anyauth.example.com/foo` &rarr; `http://anyauth.example.com/bar`) but that is no longer valid, as of [August 11, 2020](https://github.com/indieweb/indieauth/issues/35).
