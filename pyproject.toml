@@ -8,7 +8,7 @@ authors = ["fluffy <fluffy@beesbuzz.biz>"]
 python = "^3.8"
 gunicorn = "^20.0.4"
 validate_email = "^1.3"
-Flask = "^2.2.2"
+Flask = "^2.3.2"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.4"
