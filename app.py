@@ -41,3 +41,7 @@ def endpoint(path=''):
         return flask.render_template('login.html', get=get, path=path)
 
     return flask.render_template('index.html', path=path)
+
+from werkzeug.middleware.proxy_fix import ProxyFix
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
+
